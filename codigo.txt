@@ -1,0 +1,20 @@
+ <p><%=user.title %></p>
+        <p><%=user.videourl %></p>
+        <p><%=user.imgurl %></p>
+        <p><%=user.gifurl %></p> 
+         
+            <form action=<%= `/admin/${table}/${user.username}` %> method="put" > 
+                <button class="w-100 btn btn-sm btn-outline-primary" type="submit">Edit</button> 
+            </form> 
+            <form action=<%= `/admin/${table}/${user.username}` %> method="delete" > 
+                <button class="w-100 btn btn-sm btn-outline-secondary" type="submit">Delete</button> 
+            </form> 
+
+
+
+        <% collection.forEach(noticia =>{ %>
+        <div class="col themed-grid-col"> 
+        <h1><%= noticia.title %> </h1>
+        <p><%=noticia.subtitle %></p>
+        </div>
+        <% }); %>
